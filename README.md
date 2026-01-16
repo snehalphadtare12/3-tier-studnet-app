@@ -59,7 +59,7 @@
 
 ##🛣️Create Route Table 
 
-1.	Public-RT
+1.Public-RT
 
 o	add public subnet
 
@@ -122,7 +122,7 @@ o	Subnet Association(private-subent-Database,private-subnet-Tomcat)
 
 •	connect to instance
 
-•	change hostname: sudo hostnamectl set-hostname Nginx-Instance
+•	change hostname: ▶️sudo hostnamectl set-hostname Nginx-Instance
 
 •	bash
 
@@ -142,7 +142,7 @@ Log in into database
 
 <img width="940" height="277" alt="image" src="https://github.com/user-attachments/assets/46546876-931b-4542-bdc9-3a32f3dcfc0a" />
 
-Mariadb -u admin -p -h RDS(endpoint)
+▶️Mariadb -u admin -p -h RDS(endpoint)
 
 Note: replace rds-endpoint with actual endpoint value
 
@@ -176,13 +176,13 @@ exit
 
 <img width="838" height="328" alt="image" src="https://github.com/user-attachments/assets/628df6f1-edf9-452a-b77a-d8e056802cf3" />
 
-•	ssh -i hello.pem ubuntu@ip-of-tomcat-vm
+•▶️ssh -i hello.pem ubuntu@ip-of-tomcat-Instance
 
 sudo -i
 
 sudo apt update
 
-sudo apt install openjdk-11-jdk -y
+▶️sudo apt install openjdk-11-jdk -y
 
 java –version
 
@@ -190,7 +190,7 @@ sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
 
  cd /tmp
 
-wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
+▶️wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 
 sudo mkdir /opt/tomcat
 
@@ -200,17 +200,17 @@ go to webapps dir and download .war file(application)
 
 cd /opt/apache-tomcat-9.0.85/webapps
 
-curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+▶️curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 
 cd ../lib
 
-curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
+▶️curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
 MODIFY context.xml
 
 cd apache-tomcat-9.0.85.tar.gz/conf
 
-sudo vim context.xml
+✏️sudo vim context.xml
 
 add below line [connection string] at line 21
 
@@ -238,7 +238,7 @@ sudo -i
 
   yum install nginx -y
  
- vim /etc/nginx/nginx.conf
+ ✏️vim /etc/nginx/nginx.conf
 
 •	:set nu (enter below data in line 47 in between error and location)
 
@@ -256,7 +256,7 @@ systemctl start nginx
 #🌐**Go To Browser Hit Public-IP Nginx**
 <img width="778" height="312" alt="image" src="https://github.com/user-attachments/assets/a8bbeb8d-f96b-4edc-8697-daf3df50fd88" />
 
-✍️ Author
+✍️ ##Author:
 Snehal.phadtare
  
 
