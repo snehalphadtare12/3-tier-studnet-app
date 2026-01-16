@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ff9800 0%, #ff5722 100%); /* Orange gradient */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+        .overlay {
+            position: relative;
+            color: black;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            font-size: 1.2em;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            position: relative;
+            width: 300px;
+            animation: scaleIn 1s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.cleanpng.com/png-computer-icons-clip-art-user-laptop-dialer-for-cal-6804221.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .register-here {
+            margin: 5px 0;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-shadow: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: popIn 0.5s ease-in-out;
+            z-index: 1;
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .register-here:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: unfold 0.5s forwards;
+            margin: 0 5px;
+        }
+        @keyframes unfold {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<div class="overlay" id="welcome-text">
+    <h1></h1>
+</div>
+
+<div class="image-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" />
+</div>
+
+<div class="register-here">
+    <a href="http://54.169.189.50:8080/student/">Register Here</a>
+</div>
+
+<script>
+    const text = "Welcome to Student Application";
+    const welcomeTextContainer = document.getElementById('welcome-text').querySelector('h1');
+    
+    text.split('').forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.classList.add('letter');
+        span.textContent = letter;
+        welcomeTextContainer.appendChild(span);
+        span.style.animationDelay = `${index * 0.1}s`;
+        setTimeout(() => {
+            span.style.opacity = 1;
+        }, index * 100);
+    });
+</script>
+
+</body>
+</html>
