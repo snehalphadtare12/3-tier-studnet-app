@@ -1,6 +1,6 @@
 ## **Project: 3-Tier-StudentApp**
 
-#🏗️ 3 Tier Architecture Diagram
+##🏗️ 3 Tier Architecture Diagram
 
 #Flow:User → Web Tier (Nginx) → Application Tier (Tomcat) → Database Tier (RDS/MySQL)
 
