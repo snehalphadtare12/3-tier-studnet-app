@@ -36,7 +36,8 @@ o	Subnet Association(public-subnet-Nginx)
 o	add private subnets
 o	add nat
 o	Subnet Association(private-subent-Database,private-subnet-Tomcat)
- 
+ <img width="1151" height="195" alt="Instnces" src="https://github.com/user-attachments/assets/a4f75b80-8f8a-4d8c-b4cd-72f7fa624b9e" />
+
 Create EC2 Instances 
 1.	Public_Nginx_Instance ->create in public subnet ->allow port = 80,22
 2.	Private_Database_instance->create in private subnet ->allow port = 8080,22
