@@ -190,7 +190,7 @@ sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
 
  cd /tmp
 
-▶️wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
+wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 
 sudo mkdir /opt/tomcat
 
@@ -200,11 +200,11 @@ go to webapps dir and download .war file(application)
 
 cd /opt/apache-tomcat-9.0.85/webapps
 
-▶️curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
+curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 
 cd ../lib
 
-▶️curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
+curl -O https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 
 MODIFY context.xml
 
