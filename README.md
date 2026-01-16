@@ -1,4 +1,4 @@
-## **Project: 3-Tier-StudentApp**
+## 🚀**Project: 3-Tier-StudentApp**
 
 #🏗️ **3 Tier Architecture Diagram
 
@@ -18,13 +18,13 @@
 
 •	RDS
 
-##Create VPC
+##🌐Create VPC
 
 •	Name: my-3-tier-vpc
 
 •	CIDR: 10.0.0.0/16
 
-##Create Subnets
+##🔗Create Subnets
 
 1.Subnet-1
 
@@ -44,19 +44,19 @@
 
 •	CIDR: 10.0.4.0/23
 
-##Create Internet Gateway 
+##🌍Create Internet Gateway 
 
 •	Name: MY_IGW
 
 •	attach igw to vpc
 
-##Create Nat Gateway 
+##🔁Create Nat Gateway 
 
 •	Name: 3-tier-NAT-Gateway
 
 •	create in public subnet
 
-##Create Route Table 
+##🛣️Create Route Table 
 
 1.	Public-RT
 
@@ -65,6 +65,7 @@ o	add public subnet
 o	add igw
 
 o	Subnet Association(public-subnet-Nginx)
+
 2.Private-RT
 
 o	add private subnets
@@ -75,16 +76,17 @@ o	Subnet Association(private-subent-Database,private-subnet-Tomcat)
 
 <img width="940" height="251" alt="image" src="https://github.com/user-attachments/assets/78f5d32b-eaf8-4358-ac73-d5bf41810a0b" />
 
-##Create EC2 Instances 
+##💻Create EC2 Instances 
 
-1.	Public_Nginx_Instance ->create in public subnet ->allow port = 80,22
+1.	Public_Nginx_Instance ->create in public subnet ->🔐allow port = 80,22
 
-2.	Private_Database_instance->create in private subnet ->allow port = 8080,22
+2.	Private_Database_instance->create in private subnet ->🔐allow port = 8080,22
 
-3.	Private_Tomcat_Instance->create in private subnet ->allow port = 3306,22
+3.	Private_Tomcat_Instance->create in private subnet ->🔐allow port = 3306,22
 
 <img width="940" height="159" alt="image" src="https://github.com/user-attachments/assets/90cb89f0-3aa7-4178-907b-6f995b361574" />
- ##Create Database In RDS 
+
+ ##📦Create Database In RDS 
 
 •	Go To RDS
 
@@ -123,7 +125,7 @@ o	Subnet Association(private-subent-Database,private-subnet-Tomcat)
 
 •	bash
 
-##Now SSH into Database Instance
+##🔐Now SSH into Database Instance
 
 <img width="797" height="258" alt="image" src="https://github.com/user-attachments/assets/2ae50a12-fbbb-469c-9ce1-c10365d5a9b8" />
 
@@ -168,7 +170,7 @@ exit
 
 #Back to nginx-server
 
-##Now SSH into Tomcat Server
+##⚙️Now SSH into Tomcat Server
 
 <img width="838" height="328" alt="image" src="https://github.com/user-attachments/assets/628df6f1-edf9-452a-b77a-d8e056802cf3" />
 
@@ -249,8 +251,10 @@ proxy_pass http://private-IP-tomcat:8080/student/;
 
 systemctl start nginx
 
-#**Go To Browser Hit Public-IP Nginx**
+#🌐**Go To Browser Hit Public-IP Nginx**
 <img width="778" height="312" alt="image" src="https://github.com/user-attachments/assets/a8bbeb8d-f96b-4edc-8697-daf3df50fd88" />
 
+✍️ Author
+Snehal.phadtare
  
 
