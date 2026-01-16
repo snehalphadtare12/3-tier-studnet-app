@@ -38,6 +38,7 @@
 •	Name: Private-Subnet-Tomcat
 
 •	CIDR: 10.0.2.0/23
+
 3.Subnet-3
 
 •	Name:Private-Subnet-Database
@@ -138,6 +139,7 @@ systemctl start mariadb
 systemctl enable mariadb
 
 Log in into database
+
 <img width="940" height="277" alt="image" src="https://github.com/user-attachments/assets/46546876-931b-4542-bdc9-3a32f3dcfc0a" />
 
 Mariadb -u admin -p -h RDS(endpoint)
